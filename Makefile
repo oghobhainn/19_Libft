@@ -6,7 +6,7 @@
 #    By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/29 14:54:07 by cmcgahan          #+#    #+#              #
-#    Updated: 2019/10/29 14:54:54 by cmcgahan         ###   ########.fr        #
+#    Updated: 2019/10/29 15:15:00 by cmcgahan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,8 @@ SOURCES = ft_putchar.c ft_putstr.c\
 		  ft_itoa.c ft_strmapi.c\
 		  ft_putchar_fd.c ft_putstr_fd.c\
 		  ft_putendl_fd.c ft_putnbr_fd.c\
+		  ft_putchar.c ft_putstr.c\
+		  ft_putnbr.c
 
 SOURCES_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c\
 				ft_lstsize_bonus.c ft_lstlast_bonus.c\
