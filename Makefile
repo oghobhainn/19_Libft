@@ -6,7 +6,7 @@
 #    By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/29 14:54:07 by cmcgahan          #+#    #+#              #
-#    Updated: 2019/10/29 15:15:00 by cmcgahan         ###   ########.fr        #
+#    Updated: 2019/10/29 15:56:59 by cmcgahan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,8 @@ SOURCES_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c\
 
 HEADERS = libft.h
 
+HEADERS_GCH = libft.h.gch
+
 OBJECT = $(SOURCES:.c=.o)
 
 OBJECT_BONUS = $(SOURCES_BONUS:.c=.o)
@@ -60,6 +62,7 @@ all: $(NAME) bonus
 clean:
 	@rm -f $(OBJECT)
 	@rm -f $(OBJECT_BONUS)
+	@rm -f $(HEADERS_GCH)
 	@echo "Cleaning Objects\t\033[0;32m[OK]\033[0m"
 
 fclean: clean
