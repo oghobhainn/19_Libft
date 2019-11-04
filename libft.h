@@ -6,7 +6,7 @@
 /*   By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:08:56 by cmcgahan          #+#    #+#             */
-/*   Updated: 2019/11/04 15:19:49 by cmcgahan         ###   ########.fr       */
+/*   Updated: 2019/11/04 15:32:52 by cmcgahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,6 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void*));
 void				ft_putchar(char c);
 void				ft_putstr(char *str);
 void				ft_putnbr(int n);
-char				*ft_convertissor_ltox(long nbr);
+char				*ft_convertissor_ltox(long nbr, char xX);
 
 #endif
