@@ -6,7 +6,7 @@
 /*   By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 15:11:39 by cmcgahan          #+#    #+#             */
-/*   Updated: 2019/11/22 13:33:57 by cmcgahan         ###   ########.fr       */
+/*   Updated: 2019/11/22 15:09:56 by cmcgahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ static int			nbr_len(long nbr)
 	return (len);
 }
 
-char				*ft_convertissor_ltox(long nbr, char xX)
+char				*ft_convertissor_ltox(long nbr, char xx)
 {
 	int				len;
 	int				uporlow;
 	int				sign;
 	char			*hexa;
 
-	uporlow = (xX == 'x') ? 87 : 55;
+	uporlow = (xx == 'x') ? 87 : 55;
 	if (nbr == -2147483648)
 		return (ft_strdup("-80000000"));
 	sign = (nbr < 0) ? -1 : 0;

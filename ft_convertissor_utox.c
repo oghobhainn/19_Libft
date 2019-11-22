@@ -6,7 +6,7 @@
 /*   By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 16:24:29 by cmcgahan          #+#    #+#             */
-/*   Updated: 2019/11/04 16:30:53 by cmcgahan         ###   ########.fr       */
+/*   Updated: 2019/11/22 15:10:04 by cmcgahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ static int		nbr_len(unsigned int nbr)
 	return (len);
 }
 
-char			*ft_convertisser_utox(unsigned int nbr, char xX)
+char			*ft_convertisser_utox(unsigned int nbr, char xx)
 {
 	int			len;
 	int			uporlow;
 	int			sign;
 	char		*hexa;
 
-	uporlow = (xX == 'x') ? 87 : 55;
+	uporlow = (xx == 'x') ? 87 : 55;
 	len = nbr_len(nbr);
 	if (!(hexa = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
