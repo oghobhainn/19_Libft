@@ -6,7 +6,7 @@
 /*   By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:08:56 by cmcgahan          #+#    #+#             */
-/*   Updated: 2019/11/21 17:13:24 by cmcgahan         ###   ########.fr       */
+/*   Updated: 2019/11/22 14:18:44 by cmcgahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,6 @@ char				*ft_convertissor_ltox(long nbr, char x);
 char				*ft_convertissor_utox(unsigned int nbr, char x);
 void				ft_putnbr_uns(unsigned int n);
 int					ft_intheset(char const c, char const *str);
+void				ft_strdel(char **s);
 
 #endif

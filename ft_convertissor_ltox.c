@@ -6,7 +6,7 @@
 /*   By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 15:11:39 by cmcgahan          #+#    #+#             */
-/*   Updated: 2019/11/21 19:53:05 by cmcgahan         ###   ########.fr       */
+/*   Updated: 2019/11/22 13:33:57 by cmcgahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char				*ft_convertissor_ltox(long nbr, char xX)
 	sign = (nbr < 0) ? -1 : 0;
 	len = nbr_len(nbr);
 	nbr = (sign == -1) ? -nbr : nbr;
-	if (!(hexa = (char *)malloc(sizeof(char) * (len + 1))))
+	if (!(hexa = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	if (sign == -1)
 		hexa[0] = '-';

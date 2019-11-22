@@ -6,7 +6,7 @@
 #    By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/29 14:54:07 by cmcgahan          #+#    #+#              #
-#    Updated: 2019/11/21 16:14:30 by cmcgahan         ###   ########.fr        #
+#    Updated: 2019/11/22 14:18:10 by cmcgahan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ SOURCES = ft_putchar.c ft_putstr.c\
 		  ft_putchar.c ft_putstr.c\
 		  ft_putnbr.c ft_convertissor_ltox.c\
 		  ft_convertissor_utox.c ft_putnbr_uns.c\
-		  ft_intheset.c
+		  ft_intheset.c ft_strdel.c
 
 SOURCES_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c\
 				ft_lstsize_bonus.c ft_lstlast_bonus.c\
