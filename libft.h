@@ -6,7 +6,7 @@
 /*   By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:08:56 by cmcgahan          #+#    #+#             */
-/*   Updated: 2020/01/28 16:32:35 by cmcgahan         ###   ########.fr       */
+/*   Updated: 2020/01/28 16:34:10 by cmcgahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,6 @@ void				ft_putnbr(int n);
 void				ft_putnbr_uns(unsigned int n);
 int					ft_intheset(char const c, char const *str);
 void				ft_strdel(char **s);
-char				*ft_itoa_base(char *dest, size_t size, long long x, int base);
 char				*ft_utoa_base(unsigned long n, const char *base);
 
 #endif
