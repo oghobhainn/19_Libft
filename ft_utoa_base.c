@@ -6,7 +6,7 @@
 /*   By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 14:45:55 by cmcgahan          #+#    #+#             */
-/*   Updated: 2020/01/28 14:50:40 by cmcgahan         ###   ########.fr       */
+/*   Updated: 2020/01/28 14:53:00 by cmcgahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char			*ft_utoa_base(unsigned long n, const char *base)
 	{
 		new[int_size - i - 1] = (base[(int)(n - (n / base_size * base_size))]);
 		n /= base_size;
-		i++
+		i++;
 	}
 	new[int_size - i - 1] = (base[(int)(n - (n / base_size * base_size))]);
 	return (new);
