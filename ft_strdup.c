@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 14:39:33 by cmcgahan          #+#    #+#             */
-/*   Updated: 2019/10/28 11:25:47 by cmcgahan         ###   ########.fr       */
+/*   Created: 2020/01/28 16:59:53 by cmcgahan          #+#    #+#             */
+/*   Updated: 2020/01/28 16:59:55 by cmcgahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,16 @@
 
 char	*ft_strdup(const char *s1)
 {
-	int		len;
+	char	*new_s;
 	int		i;
-	char	*cpy;
 
-	len = ft_strlen(s1);
-	if (!(cpy = (char *)malloc(sizeof(char) * (len + 1))))
-		return (NULL);
 	i = 0;
-	while (s1[i])
-	{
-		cpy[i] = s1[i];
-		i++;
-	}
-	cpy[len] = '\0';
-	return (cpy);
+	if (!s1)
+		return (NULL);
+	if (!(new_s = malloc((ft_strlen(s1) + 1) * sizeof(char))))
+		return (NULL);
+	while (s1 && *s1)
+		new_s[i++] = *s1++;
+	new_s[i] = '\0';
+	return (new_s);
 }

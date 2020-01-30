@@ -6,7 +6,7 @@
 #    By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/29 14:54:07 by cmcgahan          #+#    #+#              #
-#    Updated: 2020/01/30 12:48:36 by cmcgahan         ###   ########.fr        #
+#    Updated: 2020/01/30 13:20:23 by cmcgahan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,22 +36,18 @@ SOURCES = ft_putchar.c ft_putstr.c\
 		  ft_putnbr.c\
 		  ft_putnbr_uns.c\
 		  ft_intheset.c ft_strdel.c\
-		  ft_utoa_base.c
-
-SOURCES_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c\
-				ft_lstsize_bonus.c ft_lstlast_bonus.c\
-				ft_lstadd_back_bonus.c ft_lstiter_bonus.c\
-				ft_lstdelone_bonus.c ft_lstclear_bonus.c\
-				ft_lstmap_bonus.c
-
+		  ft_utoa_base.c\
+		  ft_lstnew.c ft_lstadd_front.c\
+		  ft_lstsize.c ft_lstlast.c\
+		  ft_lstadd_back.c ft_lstiter.c\
+		  ft_lstdelone.c ft_lstclear.c\
+		  ft_lstmap.c
 
 HEADERS = libft.h
 
 HEADERS_GCH = libft.h.gch
 
 OBJECT = $(SOURCES:.c=.o)
-
-OBJECT_BONUS = $(SOURCES_BONUS:.c=.o)
 
 $(NAME):
 	@echo "Compilation..."
@@ -60,23 +56,15 @@ $(NAME):
 	@ranlib $(NAME)
 	@echo "Compilation libft\t\t\033[0;32m[OK]\033[0m"
 
-all: $(NAME) bonus
+all: $(NAME)
 
 clean:
 	@rm -f $(OBJECT)
-	@rm -f $(OBJECT_BONUS)
 	@rm -f $(HEADERS_GCH)
-	@echo "Cleaning Objects libft\t\033[0;32m[OK]\033[0m"
+	@echo "Cleaning Objects libft\t\t\033[0;32m[OK]\033[0m"
 
 fclean: clean
 	@rm -f $(NAME)
 	@echo "Cleaning libft.a\t\t\033[0;32m[OK]\033[0m"
-
-bonus:
-	@echo "Compilation des bonus en plus..."
-	@gcc $(FLAGS) -c $(SOURCES_BONUS) $(HEADERS)
-	@ar rc $(NAME) $(OBJECT_BONUS)
-	@ranlib $(NAME)
-	@echo "Compilation des bonus\t\033[0;32m[OK]\033[0m"
 
 re: fclean all

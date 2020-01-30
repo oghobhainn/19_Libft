@@ -5,36 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 15:04:35 by cmcgahan          #+#    #+#             */
-/*   Updated: 2019/10/24 15:15:20 by cmcgahan         ###   ########.fr       */
+/*   Created: 2020/01/28 17:00:18 by cmcgahan          #+#    #+#             */
+/*   Updated: 2020/01/28 17:00:20 by cmcgahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char				*ft_substr(char const *s, unsigned int start, size_t len)
+char			*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*str;
-	char			*substr;
-	unsigned int	i;
+	char			*new_s;
+	size_t			i;
 
 	i = 0;
 	if (!s)
 		return (NULL);
-	str = (char *)s;
-	substr = (char *)malloc(sizeof(char) * len + 1);
-	if (substr == NULL)
+	if (ft_strlen(s) < start)
+		len = 0;
+	else if (ft_strlen(s) < start + len)
+		len = ft_strlen(s) - start;
+	if (!(new_s = (char*)malloc((len + 1) * sizeof(char))))
 		return (NULL);
-	if ((size_t)start <= ft_strlen(s))
-	{
-		while (len > 0)
-		{
-			substr[i] = str[start];
-			start++;
-			i++;
-			len--;
-		}
-	}
-	substr[i] = '\0';
-	return (substr);
+	while (i < len && (new_s[i] = s[start++]))
+		i++;
+	new_s[i] = '\0';
+	return (new_s);
 }
