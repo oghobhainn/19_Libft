@@ -6,7 +6,7 @@
 #    By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/29 14:54:07 by cmcgahan          #+#    #+#              #
-#    Updated: 2020/01/28 16:32:08 by cmcgahan         ###   ########.fr        #
+#    Updated: 2020/01/30 12:48:36 by cmcgahan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ $(NAME):
 	@gcc $(FLAGS) -c $(SOURCES) $(HEADERS)
 	@ar rc $(NAME) $(OBJECT)
 	@ranlib $(NAME)
-	@echo "Compilation\t\t\033[0;32m[OK]\033[0m"
+	@echo "Compilation libft\t\t\033[0;32m[OK]\033[0m"
 
 all: $(NAME) bonus
 
@@ -66,11 +66,11 @@ clean:
 	@rm -f $(OBJECT)
 	@rm -f $(OBJECT_BONUS)
 	@rm -f $(HEADERS_GCH)
-	@echo "Cleaning Objects\t\033[0;32m[OK]\033[0m"
+	@echo "Cleaning Objects libft\t\033[0;32m[OK]\033[0m"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "Cleaning .a\t\t\033[0;32m[OK]\033[0m"
+	@echo "Cleaning libft.a\t\t\033[0;32m[OK]\033[0m"
 
 bonus:
 	@echo "Compilation des bonus en plus..."
