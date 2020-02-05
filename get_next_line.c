@@ -6,11 +6,11 @@
 /*   By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/25 14:48:32 by cmcgahan          #+#    #+#             */
-/*   Updated: 2020/02/05 13:46:49 by cmcgahan         ###   ########.fr       */
+/*   Updated: 2020/02/05 13:51:09 by cmcgahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 static int			ft_strchr_gnl(char *str)
 {

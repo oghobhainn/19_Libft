@@ -6,7 +6,7 @@
 /*   By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:08:56 by cmcgahan          #+#    #+#             */
-/*   Updated: 2020/02/05 13:33:15 by cmcgahan         ###   ########.fr       */
+/*   Updated: 2020/02/05 13:50:59 by cmcgahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,15 @@
 # define LIBFT_H
 
 # include <unistd.h>
+# include <limits.h>
 # include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
-# include "get_next_line.h"
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+
+# define BUFFER_SIZE 32
 
 typedef struct		s_list
 {
@@ -76,5 +81,6 @@ void				ft_putnbr_uns(unsigned int n);
 int					ft_intheset(int c, char *str);
 void				ft_strdel(char **s);
 char				*ft_utoa_base(unsigned long n, const char *base);
+int					get_next_line(int fd, char **line);
 
 #endif
