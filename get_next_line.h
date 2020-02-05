@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/05 13:33:28 by cmcgahan          #+#    #+#             */
-/*   Updated: 2020/02/05 13:33:31 by cmcgahan         ###   ########.fr       */
+/*   Created: 2019/11/29 13:24:34 by cmcgahan          #+#    #+#             */
+/*   Updated: 2020/02/05 13:47:55 by cmcgahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-char	*ft_strdup(const char *s1)
-{
-	char	*new_s;
-	int		i;
+# include <unistd.h>
+# include <stdlib.h>
+# include <limits.h>
+# include <stdio.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+# include "libft.h"
 
-	i = 0;
-	if (!s1)
-		return (NULL);
-	if (!(new_s = malloc((ft_strlen(s1) + 1) * sizeof(char))))
-		return (NULL);
-	while (s1 && *s1)
-		new_s[i++] = *s1++;
-	new_s[i] = '\0';
-	return (new_s);
-}
+# define BUFFER_SIZE 32
+
+int		get_next_line(int fd, char **line);
+
+#endif
