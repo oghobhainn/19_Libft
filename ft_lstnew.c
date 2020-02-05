@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/17 12:57:15 by cmcgahan          #+#    #+#             */
-/*   Updated: 2019/10/23 14:47:00 by cmcgahan         ###   ########.fr       */
+/*   Created: 2020/01/30 13:18:23 by cmcgahan          #+#    #+#             */
+/*   Updated: 2020/01/30 13:18:24 by cmcgahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_lstsize(t_list *lst)
+t_list	*ft_lstnew(void *content)
 {
-	int		len;
+	t_list	*newlist;
 
-	len = 0;
-	while (lst)
+	if (!(newlist = (t_list *)malloc(sizeof(t_list) + 1)))
+		return (NULL);
+	if (!content)
+		newlist->content = NULL;
+	else
 	{
-		len++;
-		lst = lst->next;
+		if (!(newlist->content = (void*)malloc(sizeof(content) + 1)))
+			return (NULL);
+		ft_memcpy(newlist->content, content, ft_strlen(content) + 1);
 	}
-	return (len);
+	newlist->next = NULL;
+	return (newlist);
 }

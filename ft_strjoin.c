@@ -5,35 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 15:09:32 by cmcgahan          #+#    #+#             */
-/*   Updated: 2019/11/22 14:44:47 by cmcgahan         ###   ########.fr       */
+/*   Created: 2020/01/30 13:39:08 by cmcgahan          #+#    #+#             */
+/*   Updated: 2020/01/30 13:39:24 by cmcgahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char			*ft_strjoin(char const *s1, char const *s2)
 {
+	char	*new;
 	int		i;
-	int		j;
-	int		len;
-	char	*str;
 
-	if (!s1 || !s2)
+	i = 0;
+	if (!s1 && !s2)
 		return (NULL);
-	i = -1;
-	j = 0;
-	len = ft_strlen(s1) + ft_strlen(s2);
-	if (!(str = (char *)malloc(sizeof(char) * len + 1)))
+	if (!(new = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char))))
 		return (NULL);
-	while (s1[++i])
-		str[i] = s1[i];
-	while (s2[j])
-	{
-		str[i] = s2[j];
-		i++;
-		j++;
-	}
-	str[i] = '\0';
-	return (str);
+	while (s1 && *s1)
+		new[i++] = *s1++;
+	while (s2 && *s2)
+		new[i++] = *s2++;
+	new[i] = '\0';
+	return (new);
 }

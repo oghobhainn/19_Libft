@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/17 12:56:52 by cmcgahan          #+#    #+#             */
-/*   Updated: 2019/10/28 10:32:26 by cmcgahan         ###   ########.fr       */
+/*   Created: 2020/01/30 13:17:30 by cmcgahan          #+#    #+#             */
+/*   Updated: 2020/01/30 13:17:32 by cmcgahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void		ft_lstadd_front(t_list **alst, t_list *new)
 {
-	t_list	*newlist;
+	t_list	*tmp;
 
-	if (!(newlist = (t_list *)malloc(sizeof(t_list) + 1)))
-		return (NULL);
-	if (!content)
-		newlist->content = NULL;
-	else
+	if (alst && new && (*alst != new))
 	{
-		if (!(newlist->content = (void*)malloc(sizeof(content) + 1)))
-			return (NULL);
-		ft_memcpy(newlist->content, content, ft_strlen(content) + 1);
+		tmp = *alst;
+		if (*alst == NULL)
+			*alst = new;
+		else
+		{
+			*alst = new;
+			new->next = tmp;
+		}
 	}
-	newlist->next = NULL;
-	return (newlist);
 }

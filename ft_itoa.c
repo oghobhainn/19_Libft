@@ -5,52 +5,57 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
+<<<<<<< HEAD
 /*   Created: 2019/10/08 17:56:00 by cmcgahan          #+#    #+#             */
 /*   Updated: 2020/01/28 16:25:57 by cmcgahan         ###   ########.fr       */
+=======
+/*   Created: 2020/01/30 13:41:09 by cmcgahan          #+#    #+#             */
+/*   Updated: 2020/01/30 13:41:18 by cmcgahan         ###   ########.fr       */
+>>>>>>> 13cea1f60883c81dacc40260637f048ec99112f2
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static long long	nbr_len(long long n)
+static int		ft_charsize_int(int n)
 {
-	int				len;
+	int		size;
 
-	len = (n < 0) ? 1 : 0;
-	if (n == 0)
-		return (1);
-	if (n < 0)
+	size = 0;
+	if (n <= 0)
+	{
 		n *= -1;
+		size++;
+	}
 	while (n > 0)
 	{
-		len++;
 		n /= 10;
+		size++;
 	}
-	return (len);
+	return (size);
 }
 
-char				*ft_itoa(long long n)
+char			*ft_itoa(int n)
 {
-	int				len;
-	int				sign;
-	long long		nbr;
-	char			*ans;
+	char		*nb;
+	int			len;
+	int			t;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	nbr = (long)n;
-	sign = (nbr < 0) ? -1 : 0;
-	len = nbr_len(nbr);
-	nbr = (sign == -1) ? -nbr : nbr;
-	if (!(ans = (char *)malloc(sizeof(char) * len + 1)))
+	t = n;
+	len = ft_charsize_int(n);
+	if (!(nb = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
-	if (sign == -1)
-		ans[0] = '-';
-	ans[len] = '\0';
-	while (len-- > 0 - sign)
+	nb[len] = '\0';
+	if (n < 0)
+		n *= -1;
+	while (len-- > 0)
 	{
-		ans[len] = (nbr % 10) + '0';
-		nbr /= 10;
+		nb[len] = n % 10 + '0';
+		n /= 10;
 	}
-	return (ans);
+	if (t < 0)
+		nb[0] = '-';
+	return (nb);
 }
