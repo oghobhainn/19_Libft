@@ -6,7 +6,7 @@
 #    By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/29 14:54:07 by cmcgahan          #+#    #+#              #
-#    Updated: 2020/02/05 13:46:58 by cmcgahan         ###   ########.fr        #
+#    Updated: 2020/02/24 12:05:22 by cmcgahan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,6 @@ SOURCES = ft_putchar.c ft_putstr.c\
 		  ft_putendl_fd.c ft_putnbr_fd.c\
 		  ft_putchar.c ft_putstr.c\
 		  ft_putnbr.c\
-		  ft_putnbr_uns.c\
 		  ft_intheset.c ft_strdel.c\
 		  ft_utoa_base.c\
 		  ft_lstnew.c ft_lstadd_front.c\
