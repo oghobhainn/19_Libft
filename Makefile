@@ -6,7 +6,7 @@
 #    By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/29 14:54:07 by cmcgahan          #+#    #+#              #
-#    Updated: 2020/02/24 12:05:22 by cmcgahan         ###   ########.fr        #
+#    Updated: 2020/03/02 13:30:06 by cmcgahan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,8 @@ SOURCES = ft_putchar.c ft_putstr.c\
 		  ft_lstadd_back.c ft_lstiter.c\
 		  ft_lstdelone.c ft_lstclear.c\
 		  ft_lstmap.c get_next_line.c\
-
+		  ft_free_tab.c
+	
 HEADERS = libft.h
 
 HEADERS_GCH = libft.h.gch

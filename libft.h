@@ -6,7 +6,7 @@
 /*   By: cmcgahan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:08:56 by cmcgahan          #+#    #+#             */
-/*   Updated: 2020/02/05 13:50:59 by cmcgahan         ###   ########.fr       */
+/*   Updated: 2020/03/02 13:30:25 by cmcgahan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,6 @@ int					ft_intheset(int c, char *str);
 void				ft_strdel(char **s);
 char				*ft_utoa_base(unsigned long n, const char *base);
 int					get_next_line(int fd, char **line);
+void				ft_free_tab(char **tab, int len);
 
 #endif
