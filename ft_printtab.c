@@ -16,6 +16,6 @@ void	ft_printtab(char **tab)
 			j++;
 		}
 		write(1, "\n",1);
-		i++
+		i++;
 	}
 }
