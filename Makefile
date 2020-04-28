@@ -34,14 +34,14 @@ SOURCES = ft_putchar.c ft_putstr.c\
 		  ft_putendl_fd.c ft_putnbr_fd.c\
 		  ft_putchar.c ft_putstr.c\
 		  ft_putnbr.c ft_printtab.c\
-		  ft_intheset.c ft_strdel.c\
+		  ft_strdel.c\
 		  ft_utoa_base.c\
 		  ft_lstnew.c ft_lstadd_front.c\
 		  ft_lstsize.c ft_lstlast.c\
 		  ft_lstadd_back.c ft_lstiter.c\
 		  ft_lstdelone.c ft_lstclear.c\
 		  ft_lstmap.c get_next_line.c\
-		  ft_free_tab.c ft_strcmp.c\
+		  ft_strcmp.c ft_isin.c\
 		  ft_strrcmp.c ft_free_array.c
 	
 HEADERS = libft.h
