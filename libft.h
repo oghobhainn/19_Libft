@@ -90,6 +90,6 @@ int				ft_strrcmp(const char *s1, const char *s2);
 void				ft_printtab(char **tab);
 void				ft_free_array(char **array);
 int				ft_isin(int c, char *set);
-
+char				**lst_to_array(t_list *lst);
 
 #endif
