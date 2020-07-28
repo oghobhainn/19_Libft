@@ -82,8 +82,10 @@ int					ft_intheset(int c, char *str);
 void				ft_strdel(char **s);
 char				*ft_utoa_base(unsigned long n, const char *base);
 int					get_next_line(int fd, char **line);
-void				ft_free_tab(char **tab, int len);
+void				ft_free_tab(char **tab);
+void				ft_free_ntab(char **tab, int len);
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strrcmp(const char *s1, const char *s2);
+
 
 #endif
