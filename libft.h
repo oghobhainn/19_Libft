@@ -24,6 +24,10 @@
 
 # define BUFFER_SIZE 32
 
+typedef int		bool;
+# define FALSE 0
+# define TRUE 1
+
 typedef struct		s_list
 {
 	void			*content;
@@ -78,14 +82,20 @@ void				ft_putchar(char c);
 void				ft_putstr(char *str);
 void				ft_putnbr(int n);
 void				ft_putnbr_uns(unsigned int n);
-int					ft_intheset(int c, char *str);
 void				ft_strdel(char **s);
 char				*ft_utoa_base(unsigned long n, const char *base);
 int					get_next_line(int fd, char **line);
+<<<<<<< HEAD
 void				ft_free_tab(char **tab);
 void				ft_free_ntab(char **tab, int len);
+=======
+>>>>>>> 008f035506e8f6274ab30045166e0d1c00132aae
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strrcmp(const char *s1, const char *s2);
+void				ft_printtab(char **tab);
+void				ft_free_array(char **array);
+int				ft_isin(int c, char *set);
+char				**lst_to_array(t_list *lst);
 
 
 #endif
